@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elijah Appelson</title>
+    <title>Elijah Appelson's Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
@@ -18,6 +18,10 @@
             color: #fff;
             padding: 1em 0;
             text-align: center;
+        }
+        header h1 {
+            font-size: 24px;
+            margin: 0;
         }
         nav ul {
             list-style: none;
@@ -44,19 +48,18 @@
             width: 100%;
             bottom: 0;
         }
-        #name-effect {
+        #header-effect {
             font-family: monospace;
             font-size: 24px;
             border: 2px solid #333;
             padding: 10px;
             display: inline-block;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Appelson's Custom Site</h1>
+        <div id="header-effect">Elijah Appelson's Portfolio</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -67,40 +70,40 @@
     </header>
     <main>
         <h2>Introduction</h2>
-        <p>This is the homepage of Appelson's custom site.</p>
-        <div id="name-effect">Elijah Appelson</div>
+        <p>This is the homepage of Elijah Appelson's custom site.</p>
     </main>
     <footer>
-        <p>&copy; 2024 Appelson</p>
+        <p>&copy; 2024 Elijah Appelson</p>
     </footer>
     <script>
-        const targetName = "Elijah Appelson";
-        const output = document.getElementById('name-effect');
+        const targetText = "Elijah Appelson's Portfolio";
+        const output = document.getElementById('header-effect');
         const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:',.<>?/";
         let index = 0;
+        const delay = 100; // Adjust this value to slow down the effect
 
         function getRandomChar() {
             return chars[Math.floor(Math.random() * chars.length)];
         }
 
-        function updateName() {
+        function updateHeader() {
             let randomText = "";
-            for (let i = 0; i < targetName.length; i++) {
+            for (let i = 0; i < targetText.length; i++) {
                 if (i < index) {
-                    randomText += targetName[i];
+                    randomText += targetText[i];
                 } else {
                     randomText += getRandomChar();
                 }
             }
             output.textContent = randomText;
 
-            if (index < targetName.length) {
+            if (index < targetText.length) {
                 index++;
-                setTimeout(updateName, 50);
+                setTimeout(updateHeader, delay);
             }
         }
 
-        updateName();
+        updateHeader();
     </script>
 </body>
 </html>
