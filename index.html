@@ -4,23 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elijah Appelson's Portfolio</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
     <style>
-        .main-content {
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-screen layout */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            background-color: #2174C6; /* Blue background */
+            color: #fff;
+            text-align: center;
         }
-        .main-content p {
-            flex: 1;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1; /* Allow content to grow and push the footer down */
         }
-        .main-content img {
-            margin-left: 20px;
-            max-width: 200px; /* Adjust the size as needed */
+
+        /* Profile Image */
+        .profile-image {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            object-fit: cover;
+        }
+
+        #header-effect {
+            font-size: 4em;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        nav {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 10px; /* Space between buttons */
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            background-color: #fff;
+            color: #2174C6;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #2174C6;
+            color: #fff;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 2em;
+            display: inline-block;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .fa {
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
-    <header>
+    <img src="eha.jpeg" alt="Elijah Appelson" class="profile-image">
+    <div class="content">
         <div id="header-effect">Elijah Appelson</div>
         <nav>
             <ul>
@@ -31,13 +127,11 @@
                 <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
-    </header>
-    <main class="main-content">
-        <p>Hi, this is Elijah Appelson and I am a mathematician and data activist using data to create accountability. This website includes much of my work over the past several years.</p>
-        <img src="eha.jpeg" alt="Elijah Appelson">
-    </main>
+    </div>
     <footer>
-        <p>&copy; 2024 Elijah Appelson</p>
+        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/your-github" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:your-email@example.com" title="Email"><i class="fas fa-envelope"></i></a>
     </footer>
     <script>
         const targetText = "Elijah Appelson";
