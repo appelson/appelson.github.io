@@ -4,80 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elijah Appelson's Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
+        .main-content {
+            display: flex;
+            align-items: center;
         }
-        header {
-            background: #4CAF50;
-            color: #fff;
-            padding: 1em 0;
-            text-align: center;
+        .main-content p {
+            flex: 1;
         }
-        header h1 {
-            font-size: 36px; /* Larger font size */
-            font-weight: bold; /* Bold font */
-            margin: 0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 1em;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            padding: 1em;
-            text-align: center;
-        }
-        footer {
-            background: #f4f4f4;
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        #header-effect {
-            font-family: monospace;
-            font-size: 36px; /* Larger font size */
-            font-weight: bold; /* Bold font */
-            display: inline-block;
-            color: #fff;
+        .main-content img {
+            margin-left: 20px;
+            max-width: 200px; /* Adjust the size as needed */
         }
     </style>
 </head>
 <body>
     <header>
-        <div id="header-effect">Elijah Appelson's Portfolio</div>
+        <div id="header-effect">Elijah Appelson</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="writing.html">Writing</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h2>Introduction</h2>
-        <p>This is the homepage of Elijah Appelson's custom site.</p>
+    <main class="main-content">
+        <p>Hi, this is Elijah Appelson and I am a mathematician and data activist using data to create accountability. This website includes much of my work over the past several years.</p>
+        <img src="eha.jpeg" alt="Elijah Appelson">
     </main>
     <footer>
         <p>&copy; 2024 Elijah Appelson</p>
     </footer>
     <script>
-        const targetText = "Elijah Appelson's Portfolio";
+        const targetText = "Elijah Appelson";
         const output = document.getElementById('header-effect');
         const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:',.<>?/";
         let index = 0;
