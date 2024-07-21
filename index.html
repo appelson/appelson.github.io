@@ -3,45 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appelson's Custom Site</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Random Letters to Correct Text</title>
     <style>
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
         }
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: white; }
+        .container {
+            text-align: center;
+            font-size: 24px;
         }
-        .typewriter {
-            font-family: gtam2;
-            overflow: hidden;
-            border-right: .15em solid white;
-            white-space: nowrap;
-            animation: typing 2s steps(30, end), blink-caret .75s step-end infinite;
-            font-size: 2em;
-            color: white;
+        #output {
+            font-family: monospace;
+            border: 2px solid #333;
+            padding: 10px;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1 class="typewriter">Elijah Appelson's Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Introduction</h2>
-        <p>This is the homepage of Appelson's custom site.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Appelson</p>
-    </footer>
+    <div class="container">
+        <h1>Random Letters to Correct Text</h1>
+        <div id="output"></div>
+    </div>
+    <script>
+        const targetText = "Hello, world!";
+        const output = document.getElementById('output');
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:',.<>?/";
+        let currentText = "";
+        let index = 0;
+
+        function getRandomChar() {
+            return chars[Math.floor(Math.random() * chars.length)];
+        }
+
+        function updateText() {
+            let randomText = "";
+            for (let i = 0; i < targetText.length; i++) {
+                if (i < index) {
+                    randomText += targetText[i];
+                } else {
+                    randomText += getRandomChar();
+                }
+            }
+            output.textContent = randomText;
+
+            if (index < targetText.length) {
+                index++;
+                setTimeout(updateText, 50);
+            }
+        }
+
+        updateText();
+    </script>
 </body>
 </html>
