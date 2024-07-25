@@ -3,28 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Appelson's Custom Site</title> 
+    <title>Projects - Appelson's Custom Site</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #networkGraph {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        main {
+    padding: 20px; /* Add padding around the main content */
+}
+.media-container {
+    display: block; /* Ensure block-level display */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 30px; /* Vertical space between containers */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: border-color 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    max-width: 900px;
+    margin: auto;
+}
+
+.media-container:hover {
+    border-color: #0056b3;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Space out description and image */
+}
+
+.project-description {
+    flex: 1; /* Allow the description to take up the available space */
+    max-width: 60%; /* Limit the width of the description */
+    margin-right: 20px; /* Space between description and image */
+}
+
+.project-description .description {
+    margin: 0;
+    color: #555;
+}
+
+.image-frame {
+    display: flex;
+    align-items: center; /* Center the image vertically */
+    justify-content: center; /* Center the image horizontally */
+    height: 250px; /* Fixed height for the frame */
+    background-color: white; /* Optional: background color to visualize the frame */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.project-image {
+      align-items: center; /* Center the image vertically */
+
+    height: 100%; /* Scale the image to fit the container height */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container without distortion */
+    border-radius: 5px; /* Optional: rounded corners for the image */
+}
+
+.media-container .buttons {
+    margin-top: 20px; /* Space above the buttons */
+}
+
+.media-container .buttons a {
+    text-decoration: none;
+    color: white; /* Text color */
+    background-color: #0056b3; /* Button background color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Space between buttons */
+    transition: background-color 0.3s;
+}
+
+.media-container .buttons a:hover {
+    background-color: #003d7a; /* Darker blue on hover */
+}
+
+.buttons i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+        
+    </style>
 </head>
 <body>
+    <svg id="networkGraph"></svg>
     <header>
-        <div id="header-effect">Portfolio</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="writing.html">Writing</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </nav>
+        <div id="header-effect">Features</div>
     </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="writing.html">Blogs</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+    
+    
     <main>
-        <h2>Projects</h2>
-        <p>Here you can list your projects with links and descriptions.</p>
+      
+        <div class="media-container">
+    <div class="title-ribbon">
+        <h3>Visualization Police Violence in Louisiana</h3>
+    </div>
+    <div class="content">
+        <div class="project-description">
+            <p class="description">The Visualizing Police Violence in Louisiana dashboard was launched in January 2024. The dashboard was created to enhance data accessibility and stewardship, amplify voices, and create accountability concerning policing in Louisiana. The dashboard launch event had 98 registrants and approximately 40 attendees. The dashboard launch also had a significant reach airing on multiple news channels, radio shows, and news articles. In total, the media coverage reached over 1,000,000 people.</p>
+            <div class="buttons">
+                <a href="tool_link_here" target="_blank"><i class="fa fa-project-diagram"></i> Project</a>
+                <a href="code_link_here" target="_blank"><i class="fa fa-code"></i> Code</a>
+            </div>
+        </div>
+        <div class="image-frame">
+            <img src="vpvl.jpeg" alt="Project Image" class="project-image">
+        </div>
+    </div>
+</div>
+
+
+<div class="media-container">
+    <div class="title-ribbon">
+        <h3>Key Statistics Visualization for Justice Lab Cases</h3>
+    </div>
+    <div class="content">
+        <div class="project-description">
+            <p class="description">The Key Statistics visualization for the Justice Lab cases was launched to provide the public and attorneys with an accessible and digestible graphic of the incredible work that the legal team is completing through the Justice Lab initiative. While supporting the public, this visualization also helps the ACLU of Louisiana internally by providing up-to-date data to staff.</p>
+            <div class="buttons">
+                <a href="tool_link_here" target="_blank"><i class="fa fa-project-diagram"></i> Project</a>
+                <a href="code_link_here" target="_blank"><i class="fa fa-code"></i> Code</a>
+            </div>
+        </div>
+        <div class="image-frame">
+            <img src="jlc.jpeg" alt="Project Image" class="project-image">
+        </div>
+    </div>
+</div>
+
+
+<!-- Juvenile Crime In Louisiana, by the Numbers (OJJ Analysis) -->
+<div class="media-container">
+    <div class="title-ribbon">
+        <h3>Juvenile Crime In Louisiana, by the Numbers</h3>
+    </div>
+    <div class="content">
+        <div class="project-description">
+            <p class="description">The Juvenile Justice analysis supports the ACLU of Louisiana’s policy fight during the current Special Session on Crime. This project includes a novel analysis of two leading arrest datasets and shows that youth crime is decreasing in Louisiana, despite the current narrative. This analysis has been utilized by multiple organizations, including the Louisiana Center for Children's Rights.</p>
+            <div class="buttons">
+                <a href="tool_link_here" target="_blank"><i class="fa fa-project-diagram"></i> Project</a>
+                <a href="code_link_here" target="_blank"><i class="fa fa-code"></i> Code</a>
+            </div>
+        </div>
+        <div class="image-frame">
+            <img src="juv.jpeg" alt="Juvenile Crime Analysis" class="project-image">
+        </div>
+    </div>
+</div>
+
+<!-- Washington 2 Lawsuit -->
+<div class="media-container">
+    <div class="title-ribbon">
+        <h3>Washington et al. V. Smith et al.</h3>
+    </div>
+    <div class="content">
+        <div class="project-description">
+            <p class="description">The lawsuit data analysis aims to demonstrate that the St. Tammany Parish Sheriff’s Office is discriminating against African Americans through their traffic stops. This research included a large-scale predictive analysis on the demographics of people stopped, their citations, and an Optical Character Recognition (OCR) of citation PDFs. We found that from January through November of 2023, Black individuals in St. Tammany Parish were 250% more likely to be stopped for alleged traffic violations than white individuals. While 15% of the Parish’s residents identify as Black, they account for 36% of the people stopped and 26% of those cited. We are still in the midst of this lawsuit.</p>
+            <div class="buttons">
+                <a href="tool_link_here" target="_blank"><i class="fa fa-project-diagram"></i> Project</a>
+                <a href="code_link_here" target="_blank"><i class="fa fa-code"></i> Code</a>
+            </div>
+        </div>
+        <div class="image-frame">
+            <img src="wash2.jpeg" alt="Washington 2 Lawsuit" class="project-image">
+        </div>
+    </div>
+</div>
+
+<!-- The Advocate Analysis -->
+<div class="media-container">
+    <div class="title-ribbon">
+        <h3>The Advocate Media Analysis</h3>
+    </div>
+    <div class="content">
+        <div class="project-description">
+            <p class="description">The Advocate analysis examines how media coverage influences perceptions of crime in Louisiana. We analyzed every article from The Advocate from 2016 and found that out of 102,029 news articles, 27,799 (27%) were in the "police and crime" category. Coverage varied from 34% in 2016 to 18% in 2023, with fluctuations in between, including an increase to 24% in 2021.</p>
+            <div class="buttons">
+                <a href="tool_link_here" target="_blank"><i class="fa fa-project-diagram"></i> Project</a>
+                <a href="code_link_here" target="_blank"><i class="fa fa-code"></i> Code</a>
+            </div>
+        </div>
+        <div class="image-frame">
+            <img src="advocate.jpeg" alt="The Advocate Analysis" class="project-image">
+        </div>
+    </div>
+</div>
+
+<!-- Statute of Limitation Analysis -->
+<div class="media-container">
+    <div class="title-ribbon">
+        <h3>One vs. Two-year Statute of Limitation Impact Factsheet</h3>
+    </div>
+    <div class="content">
+        <div class="project-description">
+            <p class="description">The Statute of Limitation Impact Factsheet challenges the narrative that shorter statutes of limitations result in more meritorious cases. Our analysis indicates that raising the statute of limitations in Louisiana for police action cases may reduce court caseloads and lead to more meritorious cases. We also uncovered that shorter statutes disproportionately affect Black communities. This analysis is critical for a potential Supreme Court case challenging the current statute of limitations in Louisiana, a leading justice issue in the state.</p>
+            <div class="buttons">
+                <a href="tool_link_here" target="_blank"><i class="fa fa-project-diagram"></i> Project</a>
+                <a href="code_link_here" target="_blank"><i class="fa fa-code"></i> Code</a>
+            </div>
+        </div>
+        <div class="image-frame">
+            <img src="sol2.jpeg" alt="Statute of Limitation Analysis" class="project-image">
+        </div>
+    </div>
+</div>
+
+
+
     </main>
     <footer>
-        <p>&copy; 2024 Appelson</p>
+        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/your-github" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:your-email@example.com" title="Email"><i class="fas fa-envelope"></i></a>
     </footer>
     <script>
         const targetText = "Projects";
@@ -56,5 +268,6 @@
 
         updateHeader();
     </script>
+    <script src="me/script2.js"></script>
 </body>
 </html>
