@@ -11,157 +11,15 @@
      <title>Projects</title>
 
     <style>
-       #networkGraph {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .resume-container {
-    max-width: 900px;
-    margin: auto;
-}
-        
-        main {
-            padding: 20px; /* Add padding around the main content */
-        }
-
-        .media-container {
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            padding: 10px;
-            margin-bottom: 40px;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-
-        .media-container:hover {
-            border-color: #0056b3;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .content {
-            display: flex;
-            align-items: flex-start; /* Align items to the top */
-            justify-content: space-between; /* Space out description and image */
-        }
-
-        .project-description {
-            flex: 1; /* Allow the description to take up the available space */
-            max-width: 60%; /* Limit the width of the description */
-            margin-right: 20px; /* Space between description and image */
-        }
-
-        .project-description .description {
-            margin: 0;
-            color: #555;
-        }
-
-        .image-frame {
-            display: flex;
-            align-items: center; /* Center the image vertically */
-            justify-content: center; /* Center the image horizontally */
-            height: 250px; /* Fixed height for the frame */
-            background-color: white; /* Optional: background color to visualize the frame */
-            border-radius: 10px; /* Optional: rounded corners */
-        }
-
-        .project-image {
-            align-items: center; /* Center the image vertically */
-            height: 100%; /* Scale the image to fit the container height */
-            width: auto; /* Maintain aspect ratio */
-            object-fit: cover; /* Cover the container without distortion */
-            border-radius: 5px; /* Optional: rounded corners for the image */
-        }
-
-        .media-container .buttons {
-            margin-top: 20px; /* Space above the buttons */
-        }
-
-        .media-container .buttons a {
-            text-decoration: none;
-            color: #fff; /* Text color */
-            background-color: #0056b3; /* Button background color */
-            padding: 10px 20px; /* Button padding */
-            border-radius: 5px; /* Rounded corners */
-            margin-right: 10px; /* Space between buttons */
-            transition: background-color 0.3s, transform 0.3s;
-            display: inline-flex;
-            align-items: center;
-            font-size: 14px; /* Adjust font size */
-            font-weight: 600; /* Bold text */
-        }
-
-        .media-container .buttons a:hover {
-            background-color: #003d7a; /* Darker blue on hover */
-            transform: translateY(-2px); /* Slight lift effect */
-        }
-
-        .buttons i {
-            margin-right: 8px; /* Space between icon and text */
-            font-size: 16px; /* Adjust icon size */
-        }
-
-        @media screen and (max-width: 600px) {
-            .image-frame {
-                display: none; /* Hide the image frame on small screens */
-            }
-
-            .project-description {
-                max-width: 100%; /* Allow the description to take full width on small screens */
-                margin-right: 0; /* Remove margin */
-            }
-        }
-          .section-bar {
-    position: relative;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #0056b3;
-    padding-bottom: 5px;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.media-container {
-    position: relative; /* Ensure tags can be positioned absolutely */
-}
-
-.tags {
-    position: absolute;
-    bottom: -10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
-    display: flex;
-    gap: 5px; /* Space between tags */
-    flex-wrap: wrap; /* Allow tags to wrap if necessary */
-    justify-content: right; /* Center the navigation items */
-}
-
-.tag {
-    background-color: #ff6464; /* Tag background color */
-    color: white; /* Tag text color */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 5px 10px; /* Adjust size as needed */
-    font-size: 12px; /* Adjust font size as needed */
-    text-align: center; /* Center text in the tag */
-    white-space: nowrap; /* Prevent text from wrapping */
-    display: inline-block; /* Ensure tags do not stretch to fill container */
-}
+    
 @media screen and (max-width: 800px) {
     .section-bar {
         color: white;
     }
     
     .tags {
-        right: 10px; /* Adjust as needed */
-        bottom: -10px; /* Adjust as needed */
+        right: 10px; 
+        bottom: -10px; 
     }
 }
 
@@ -170,50 +28,6 @@
         display: none;
     }
 }
-
-
-
-
-
-
-
-
-
-
-.filter-buttons {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    gap: 10px; /* Space between buttons */
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    justify-content: center; /* Center the navigation items */
-}
-
-.filter-buttons button {
-    background-color: #ff6464; /* Button background color */
-    color: white; /* Text color */
-    border: 1px solid white;
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 20px; /* Button padding */
-    font-size: 14px; /* Adjust font size */
-    font-weight: 600; /* Bold text */
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.filter-buttons button:hover {
-    background-color: transparent; /* Darker blue on hover */
-    color: black;
-    transform: translateY(-2px); /* Slight lift effect */
-}
-
-.filter-buttons button.selected {
-    background-color: #a83232; /* Darker color for the selected button */
-    color: white; /* Ensure text color contrasts with the darker background */
-}
-
         
     </style>
 </head>
