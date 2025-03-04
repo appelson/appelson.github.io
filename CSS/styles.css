@@ -83,20 +83,22 @@ nav ul li a:hover {
 }
 
 .profile-image {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            border: 3px solid #2174C6;
-            object-fit: cover;
-            transition: background-color 0.3s
-        }
-        
-        .profile-image:hover {
-          transform: scale(1.3);
-        }
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #2174C6;
+    object-fit: cover;
+    transition: transform 0.3s ease, background-color 0.3s;
+    transform-origin: center;
+}
+
+.profile-image:hover {
+    transform: scale(1.3);
+}
+
 
 main {
     padding: 2rem;
