@@ -94,7 +94,7 @@ nav ul li a:hover {
             transition: background-color 0.3s
         }
         
-        .profile-image: hover {
+        .profile-image:hover {
           transform: scale(1.3);
         }
 
