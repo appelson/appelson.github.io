@@ -31,20 +31,20 @@
         }
 
         
-        .profile-image {
+.profile-image-new {
     position: absolute;
     top: 20px;
     right: 20px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 3px solid #ffffff;
+    border: 3px solid #fff;
     object-fit: cover;
     transition: transform 0.3s ease, background-color 0.3s;
     transform-origin: center;
 }
 
-.profile-image:hover {
+.profile-image-new:hover {
     transform: scale(1.3);
 }
 
