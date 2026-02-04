@@ -3,257 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Resume | Elijah Appelson</title>
-
-    <!-- Styles -->
-    <link rel="icon" href="../images/ehacover.png" type="image/png">
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- Scripts -->
-    <script src="https://d3js.org/d3.v7.min.js" defer></script>
-
-    <!-- Open Graph -->
+<link rel="icon" href="../images/ehacover.png" type="image/png">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <meta property="og:title" content="Resume">
     <meta property="og:description" content="Resume for Elijah Appelson">
     <meta property="og:image" content="../images/ehacover.png">
     <meta property="og:url" content="appelson.github.io/blogs">
-    <link rel="icon" href="../images/ehacover.png" type="image/png">
+    <title>Resume</title>
 
-
+   <a href="/">
+  <img src="../images/Elijah_headshot2.png" alt="Elijah Appelson" class="profile-image">
+        </a>
     <style>
         #networkGraph {
-            position: fixed;
-            inset: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             z-index: -1;
         }
-
         .resume-container {
-            max-width: 900px;
-            margin: auto;
-        }
+    max-width: 900px;
+    margin: auto;
+}
 
-        .resume-container h2 {
-            border-bottom: 2px solid #0056b3;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
+.resume-container h2 {
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
 
-        .job {
-            margin-bottom: 24px;
-        }
+.resume-container .project-container {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
     </style>
 </head>
-
 <body>
-    <svg id="networkGraph" aria-hidden="true"></svg>
-
+    <svg id="networkGraph"></svg>
     <header>
-        <a href="/" aria-label="Home">
-            <img
-                src="../images/Elijah_headshot2.png"
-                alt="Elijah Appelson headshot"
-                class="profile-image"
-            >
-        </a>
         <div id="header-effect">Resume</div>
     </header>
-
-    <nav aria-label="Main navigation">
+    <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects/">Projects</a></li>
-            <li><a href="/media/">Media</a></li>
-            <li><a href="/blogs/">Blogs</a></li>
-            <li><a href="/resume/" aria-current="page">Resume</a></li>
-        </ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/media/">Media</a></li>
+        <li><a href="/blogs/">Blogs</a></li>
+        <li><a href="/resume/">Resume</a></li>
+    </ul>
     </nav>
-
     <main>
         <div class="resume-container">
-
-            <section class="about">
+            <section class="who am I">
                 <h2>Resume</h2>
-                <p>
-                    Activist, Social Data & Computational Social Scientist experienced in machine learning,
-                    web scraping, and data storytelling. Using data to create accountability.
-                </p>
+                <p>Activist, Social Data/Computational Social Scientist experienced in machine learning, web scraping, and data storytelling. Using data to create accountability.</p>
             </section>
-
+            
             <section class="education">
-                <h2>Education</h2>
-
-                <p><strong>Stanford University</strong> — Stanford, CA</p>
-                <p>MS Candidate, Management Science & Engineering (Computational Social Science)</p>
-                <p>September 2025 – Current (On Leave)</p>
+                <h2>EDUCATION</h2>
+                <p><strong>Stanford University</strong> | Stanford, CA</p>
+                <p>September 2025 - Current (On Leave)</p>
+                <p>MS Candidate, Management Science and Engineering, Computational Social Science Track</p>
                 <p>GPA: 4.30 / 4.00</p>
-
-                <br>
-
-                <p><strong>Vassar College</strong> — Poughkeepsie, NY</p>
-                <p>B.A. in Pure Mathematics (Phi Beta Kappa, General & Departmental Honors)</p>
+                
+                <p><strong>Vassar College</strong> | Poughkeepsie, NY</p>
                 <p>Graduated May 2023</p>
+                <p>Bachelor of Arts in Pure Mathematics (Phi Beta Kappa, General Honors, and Departmental Honors)</p>
                 <p>GPA: 4.00 / 4.00</p>
             </section>
 
             <section class="experience">
-                <h2>Experience</h2>
-
+                <h2>EXPERIENCE</h2>
                 <div class="job">
-                    <h3>Research Assistant — New York University</h3>
-                    <p><strong>January 2026 – Present</strong></p>
+                    <h3>Research Assistant, New York University</h3>
+                    <p><strong>January 2026 - Current</strong></p>
                     <ul>
-                        <li>Lead project analyzing U.S. press freedom attacks using web scraping and custom LLMs.</li>
-                        <li>Build and clean multi-source datasets for quantitative media analysis.</li>
+                        <li>Lead a project analyzing the effects of recent attacks on press freedom in the U.S. using data scraping and custom large language models.</li>
+                        <li>Collect, clean, and structure datasets from multiple major outlets to support quantitative analysis.</li>
                     </ul>
                 </div>
-
+                
                 <div class="job">
-                    <h3>Data Scientist — ACLU of Louisiana</h3>
-                    <p><strong>June 2023 – Present</strong></p>
+                    <h3>Data Scientist (formerly Data Analyst), American Civil Liberties Union (ACLU) of Louisiana</h3>
+                    <p><strong>June 2023 - Current</strong></p>
                     <ul>
-                        <li>Launched 5+ statewide dashboards on police violence reaching 1M+ residents.</li>
-                        <li>Contribute to national ACLU working groups on community safety and generative AI.</li>
-                        <li>Author 20+ reports cited by lawmakers and outlets including MSNBC.</li>
-                        <li>Lead cross-org research with DOJ, RFK Human Rights, and civil rights firms.</li>
+                        <li>Engineer and launch 5+ public-facing dashboards visualizing systemic police violence in Louisiana, reaching 1M+ residents and directly informing advocacy campaigns that influence state legislation.</li>
+                        <li>Serve on the National ACLU's Reimagining Community Safety and Generative AI working groups, contributing to nationwide policy strategy.</li>
+                        <li>Author or co-author of 20+ data-driven reports on youth justice, immigration, voting rights, and redistricting, cited by policymakers and media outlets, including MSNBC and More Perfect Union.</li>
+                        <li>Lead cross-organizational research collaborations with RFK Human Rights, Innocence Project, DOJ, and civil rights law firms, coordinating data collection and analytics across partner organizations.</li>
                     </ul>
                 </div>
-
+                
                 <div class="job">
-                    <h3>Quantitative Tutor — Vassar College</h3>
-                    <p><strong>September 2020 – May 2023</strong></p>
+                    <h3>Quantitative Tutor, Vassar College</h3>
+                    <p><strong>September 2020 - May 2023</strong></p>
                     <ul>
-                        <li>Tutored 50+ students in mathematics, CS, physics, and economics.</li>
+                        <li>Tutored over 50 students across a range of quantitative disciplines, including Mathematics, Computer Science, Physics, and Economics.</li>
                     </ul>
                 </div>
-
+                
                 <div class="job">
-                    <h3>Legislative Data Specialist — Center for Community Alternatives</h3>
-                    <p><strong>June 2021 – November 2022</strong></p>
+                    <h3>Legislative Data Specialist, Center for Community Alternatives</h3>
+                    <p><strong>June 2021 - November 2022</strong></p>
                     <ul>
-                        <li>Unified CRM for 20,000+ members, improving campaign targeting.</li>
-                        <li>Automated legislative and media monitoring via Python scrapers.</li>
+                        <li>Consolidated and cleaned data for 20,000+ members into a unified CRM system, reducing data entry time and enabling targeted outreach that increased campaign engagement.</li>
+                        <li>Automated media tracking and legislative monitoring using custom Python scrapers, reducing manual research time from 15 hours to 2 hours weekly and enabling real-time strategic responses.</li>
                     </ul>
                 </div>
-
+                
                 <div class="job">
-                    <h3>Court Observation Intern — Vera Institute of Justice</h3>
-                    <p><strong>July 2022 – September 2022</strong></p>
+                    <h3>Court Observation Intern, Vera Institute of Justice</h3>
+                    <p><strong>July 2022 - September 2022</strong></p>
                     <ul>
-                        <li>Analyzed bail and sentencing patterns across 5 county courts.</li>
-                        <li>Findings published and cited in regional bail reform coverage.</li>
+                        <li>Collected and analyzed quantitative and qualitative data on 100+ defendants across 5 Ulster County courts, identifying patterns in bail decisions and sentencing disparities.</li>
+                        <li>Co-authored findings published by the Vera Institute and featured in the Buffalo Times, contributing to regional bail reform discussions.</li>
                     </ul>
                 </div>
-
+                
                 <div class="job">
-                    <h3>Data Fellow — BlueBonnet Data</h3>
-                    <p><strong>May 2022 – August 2022</strong></p>
+                    <h3>Data Fellow, BlueBonnet Data</h3>
+                    <p><strong>May 2022 - August 2022</strong></p>
                     <ul>
-                        <li>Automated voter file processing for large-scale civic campaigns.</li>
+                        <li>Developed Python functions to automate voter file processing for 1000+ records, reducing processing time for civic engagement campaigns: Western Virginia Civic Engagement Table and For West Virginia's Future.</li>
                     </ul>
                 </div>
-
+                
                 <div class="job">
-                    <h3>Researcher — Consortium on Forced Migration</h3>
-                    <p><strong>January 2021 – July 2021</strong></p>
+                    <h3>Researcher, Consortium on Forced Migration, Education, and Displacement</h3>
+                    <p><strong>January 2021 - July 2021</strong></p>
                     <ul>
-                        <li>Built and curated a 200+ resource academic bibliography site.</li>
-                        <li>Research featured in EuropeNow Journal.</li>
+                        <li>Built "Selective Bibliography on Forced Migration and Displacement" website, curating 200+ academic resources for refugee studies audiences.</li>
+                        <li>Research featured in the EuropeNow Journal, reaching international academic and policy audiences.</li>
                     </ul>
                 </div>
             </section>
 
             <section class="volunteer">
-                <h2>Volunteer Experience</h2>
-
+                <h2>VOLUNTEER EXPERIENCE</h2>
                 <div class="job">
-                    <h3>Research Analyst — Human Rights Research Center</h3>
-                    <p><strong>October 2025 – Present</strong></p>
+                    <h3>Research Analyst, Human Rights Research Center</h3>
+                    <p><strong>October 2025 - Current</strong></p>
                     <ul>
-                        <li>Global human rights monitoring and reporting.</li>
-                        <li>Authoring report on age-verification laws.</li>
+                        <li>Conduct research and monitor human rights issues globally by collecting and analyzing data.</li>
+                        <li>Drafting a report on the history of age-verification laws.</li>
                     </ul>
                 </div>
-
+                
                 <div class="job">
-                    <h3>Technology Working Group — BlueBonnet Data</h3>
-                    <p><strong>May 2024 – August 2025</strong></p>
+                    <h3>Technology Working Group Member, BlueBonnet Data</h3>
+                    <p><strong>May 2024 - August 2025</strong></p>
                     <ul>
-                        <li>Trained 30+ volunteers in applied data science.</li>
-                        <li>Supervised 10+ research projects.</li>
+                        <li>Delivered data science training to 30+ volunteers working on political campaigns, covering statistical analysis, visualization, and quantitative policy analysis.</li>
+                        <li>Oversaw 10+ research projects, providing research support.</li>
                     </ul>
                 </div>
-
+                
                 <div class="job">
-                    <h3>Leader — End the New Jim Crow Action Network</h3>
-                    <p><strong>May 2020 – July 2022</strong></p>
+                    <h3>Leader, End the New Jim Crow Action Network</h3>
+                    <p><strong>May 2020 - July 2022</strong></p>
                     <ul>
-                        <li>Led 100+ volunteers across two elected terms.</li>
-                        <li>Built public-facing court watch database.</li>
+                        <li>Directed organization with 100+ volunteers across two elected terms, managing recruitment, training, and project coordination.</li>
+                        <li>Developed the "Court Watch of Dutchess County Interactive Database," enabling public access to 4+ years of judicial data on 500+ cases.</li>
                     </ul>
                 </div>
             </section>
 
             <section class="honors">
-                <h2>Awards & Honors</h2>
+                <h2>SELECT AWARDS, HONORS & COMPETITIONS</h2>
                 <ul>
-                    <li><strong>Eleanor H. DeGolier Graduate Prize (2025)</strong></li>
-                    <li><strong>Humane Intelligence Algorithmic Bias Bounty (2024)</strong></li>
-                    <li><strong>MIT Technology & Policy Hackathon (2024)</strong></li>
-                    <li><strong>Vassar LAVA Talk Speaker (2024)</strong></li>
-                    <li><strong>Burnam Fellowship (2021)</strong></li>
+                    <li><strong>Eleanor H. DeGolier Graduate Prize (2025):</strong> Scholarship for graduate education.</li>
+                    <li><strong>Humane Intelligence Algorithmic Bias Bounty Winner (2024):</strong> Built the highest-accuracy LLM bias prediction model among 200+ competitors.</li>
+                    <li><strong>MIT Technology & Policy Hackathon (2024):</strong> Created a dashboard for California District Attorney Second Look case prioritization.</li>
+                    <li><strong>Vassar College LAVA Talk (2024):</strong> Guest lecture on technology for social change.</li>
+                    <li><strong>Eleanor H. DeGolier Prize for Academic Excellence (2022):</strong> Highest academic standing, Junior Year.</li>
+                    <li><strong>Burnam Fellowship (2021):</strong> Funded criminal justice internship.</li>
+                    <li><strong>Vassar Community Fellowship (2020):</strong> Funded full-time community organizing work.</li>
+                    <li><strong>State and Congressional Honor (2019):</strong> Community building through music.</li>
                 </ul>
             </section>
 
             <section class="skills">
-                <h2>Skills</h2>
+                <h2>SKILLS</h2>
                 <ul>
-                    <li><strong>Programming:</strong> Python, R, SQL, HTML, CSS</li>
-                    <li><strong>Data Science:</strong> ML, NLP, Geospatial, Network Analysis, OCR</li>
-                    <li><strong>Tools:</strong> GitHub, Tableau, Power BI, ArcGIS</li>
-                    <li><strong>Languages:</strong> Basic Spanish, Basic ASL</li>
+                    <li><strong>Programming:</strong> Python (Selenium, TensorFlow, Scikit-learn), R (Shiny, Tidyverse), SQL, HTML, CSS</li>
+                    <li><strong>Data Science:</strong> Machine Learning, Statistical Modeling, NLP, Data Visualization, Geospatial Analysis, Web Scraping, Network Analysis, OCR</li>
+                    <li><strong>Tools:</strong> GitHub, Tableau, Power BI, ArcGIS, LexMachina, Excel</li>
+                    <li><strong>Languages:</strong> Basic Spanish, Basic American Sign Language</li>
                 </ul>
             </section>
-
         </div>
     </main>
-
-    <footer>
-        <a href="https://www.linkedin.com/in/elijahappelson" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/appelson" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:elijahappelson@gmail.com" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-        </a>
+   <footer>
+        <a href="https://www.linkedin.com/in/elijahappelson" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/appelson" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:elijahappelson@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
     </footer>
-
     <script>
         const targetText = "Resume";
-        const output = document.getElementById("header-effect");
-        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+        const output = document.getElementById('header-effect');
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:',.<>?/";
         let index = 0;
+        const delay = 100; // Adjust this value to slow down the effect
+
+        function getRandomChar() {
+            return chars[Math.floor(Math.random() * chars.length)];
+        }
 
         function updateHeader() {
-            output.textContent = targetText
-                .split("")
-                .map((char, i) => (i < index ? char : chars[Math.floor(Math.random() * chars.length)]))
-                .join("");
+            let randomText = "";
+            for (let i = 0; i < targetText.length; i++) {
+                if (i < index) {
+                    randomText += targetText[i];
+                } else {
+                    randomText += getRandomChar();
+                }
+            }
+            output.textContent = randomText;
 
             if (index < targetText.length) {
                 index++;
-                setTimeout(updateHeader, 100);
+                setTimeout(updateHeader, delay);
             }
         }
 
         updateHeader();
     </script>
-
     <script src="../Java/script2.js"></script>
 </body>
 </html>
