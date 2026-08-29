@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
             faceGroup.append("polygon")
                 .attr("class", "face")
                 .attr("points", points.map(p => p.join(",")).join(" "))
-                .attr("fill", "rgba(255, 100, 100, 0.5)") // Color with opacity
+                .attr("fill", "rgba(235, 79, 79, 0.5)") // Color with opacity
                 .attr("stroke", "black")
                 .attr("stroke-width", 1);
         });

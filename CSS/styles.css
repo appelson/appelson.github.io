@@ -6,17 +6,18 @@ body {
             color: #333;
         }
         header {
-            color: ##2174C6;
+            color: #2174C6;
             padding: 1em 0;
             text-align: center;
         }
         
         #header-effect {
-            font-family: monospace;
-            font-size: 50px; 
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-size: 60px; 
             font-weight: bold; 
             display: inline-block;
-            color: ##2174C6;
+            color: #2174C6;
+            text-transform: uppercase;
         }
 
 nav {
