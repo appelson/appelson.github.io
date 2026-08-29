@@ -16,7 +16,7 @@ body {
             font-size: 60px; 
             font-weight: bold; 
             display: inline-block;
-            color: #2174C6;
+            color: #247bd2;
             text-transform: uppercase;
         }
 
@@ -40,7 +40,7 @@ nav {
 
         nav ul li a {
     display: inline-block;
-    background-color: #2174C6; 
+    background-color: #247bd2; 
     color: #fff; 
     text-decoration: none;
     padding: 15px 30px;
